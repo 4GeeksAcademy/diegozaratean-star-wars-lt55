@@ -21,7 +21,9 @@ export const Home = () => {
 	return (
 		<div className="text-center mt-5">
 			<h1>Naves  </h1>
-			{naves.map((nave)=> <CardNave key={nave.uid} uid={nave.uid}  nombre={nave.name} nave={nave}/>)}
+			<div className="row flex-row flex-nowrap overflow-x-auto">
+				{naves.map((nave)=> <CardNave key={nave.uid} uid={nave.uid}  nombre={nave.name} nave={nave}/>)}
+			</div>
 			
 		</div>
 	);
